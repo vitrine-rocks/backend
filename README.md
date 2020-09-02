@@ -1,5 +1,7 @@
 # Vitrine.rocks Backend
 
+![](https://github.com/vitrine-rocks/backend/workflows/Deploy/badge.svg)
+
 ## Environment:
 * Ruby 2.7.1
 * Rails 6.0.3
