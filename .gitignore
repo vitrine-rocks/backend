@@ -1,0 +1,17 @@
+db/schema.rb
+/public/assets/*.*
+/public/uploads
+/log/*.log
+/log
+/tmp
+/coverage
+/.rspec
+dump.rdb
+.DS_STORE
+.env
+.comandos
+.vscode
+.byebug_history
+db/development.rb
+
+/config/master.key
