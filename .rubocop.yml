@@ -1,0 +1,59 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - vendor/**/*
+    - log/**/*
+    - bin/*
+    - 'Gemfile'
+    - db/*
+    - db/migrate/*
+    - spec/rails_helper.rb
+    - spec/spec_helper.rb
+    - config/**/*
+    - app/channels/**/*
+  TargetRubyVersion: 2.7.1
+
+Rails:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Performance/StringReplacement:
+  Enabled: true
+
+HasAndBelongsToMany:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 100
+
+Metrics/ClassLength:
+  Max: 200
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'db/seeds.rb'
+    - 'config/routes.rb'
+    - 'Guardfile'
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+  
