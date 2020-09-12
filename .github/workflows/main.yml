@@ -24,7 +24,7 @@ jobs:
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
       - name: Run migrations
         run: |
-          rake db:migrate
+          heroku run rake db:migrate
       - name: Deploy to production
         if: github.ref == 'refs/heads/master'
         uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
