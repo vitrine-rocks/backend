@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Rubocop checks
+        uses: luizfonseca/github-actions-rubocop@1.5.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
       - name: Deploy to staging
         if: github.ref == 'refs/heads/qa'
         uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
