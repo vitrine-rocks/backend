@@ -7,8 +7,7 @@ ruby '2.7.1'
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use Puma as the app server
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+gem 'jserializer'
 gem 'pg'
 
 # Reduces boot times through caching; required in config/boot.rb
