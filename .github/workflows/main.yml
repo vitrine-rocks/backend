@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Rubocop checks
+        uses: luizfonseca/github-actions-rubocop@1.5.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
       - name: Deploy to staging
         if: github.ref == 'refs/heads/qa'
         uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
@@ -18,7 +22,9 @@ jobs:
           heroku_app_name: ${{ secrets.HEROKU_STG_APP_NAME }}
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
-
+      - name: Run migrations
+        run: |
+          heroku run rake db:migrate
       - name: Deploy to production
         if: github.ref == 'refs/heads/master'
         uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
