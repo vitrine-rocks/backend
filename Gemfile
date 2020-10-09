@@ -8,6 +8,7 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use Puma as the app server
 gem 'jserializer'
+gem 'jwt'
 gem 'pg'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -22,6 +23,7 @@ group :development, :test do
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
     gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
   end
+  gem 'rspec-json_expectations'
 end
 
 group :development do

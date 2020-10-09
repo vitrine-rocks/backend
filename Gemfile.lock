@@ -128,6 +128,7 @@ GEM
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jserializer (0.2.1)
+    jwt (2.2.2)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -189,6 +190,7 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.7.1)
     rexml (3.2.4)
+    rspec-json_expectations (2.2.0)
     rspec-nc (0.0.3)
       terminal-notifier (~> 1.4.2)
     rubocop (0.90.0)
@@ -243,12 +245,14 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   jserializer
+  jwt
   listen (~> 3.2)
   pg
   rack-cors
   rails (~> 6.0.3, >= 6.0.3.2)
   rspec-core!
   rspec-expectations!
+  rspec-json_expectations
   rspec-mocks!
   rspec-nc
   rspec-rails!
