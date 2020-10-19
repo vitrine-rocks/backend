@@ -3,5 +3,6 @@
 Rails.application.routes.draw do
   namespace :portal do
     resources :product_categories, only: %i[index], defaults: { format: :json }
+    resources :showcases, only: %i[index], defaults: { format: :json }
   end
 end
