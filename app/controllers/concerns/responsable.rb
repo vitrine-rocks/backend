@@ -1,4 +1,4 @@
-module ResponseConcern
+module Responsable
   def render_json(resource, options = {})
     if options.key?(:serializer)
       serializer = options.delete(:serializer)

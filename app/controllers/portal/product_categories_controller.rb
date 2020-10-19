@@ -1,6 +1,4 @@
-class Portal::ProductCategoriesController < ApplicationController
-  include ResponseConcern
-
+class Portal::ProductCategoriesController < SecuredController
   def index
     product_categories = ProductCategory
                          .where(product_category: nil)
