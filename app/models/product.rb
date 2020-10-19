@@ -5,6 +5,6 @@ class Product < ApplicationRecord
   scope :showcase, -> { where(showcase: true).order(:showcase_exhibition_order) }
 
   def showcase_image_url
-    images.where(showcase: true).first&.url
+    images.find_by(showcase: true)&.url
   end
 end
