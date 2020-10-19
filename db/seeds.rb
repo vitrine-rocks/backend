@@ -28,10 +28,11 @@ ProductCategory.create!(description: 'Anel de amarração', product_category: rd
 ProductCategory.create!(description: 'Armações', product_category: rd, slug: 'armacoes', exhibition_order: 2)
 ProductCategory.create!(description: 'Braço anti-balanço', product_category: rd, slug: 'braco-anti-balanco', exhibition_order: 3)
 
-Product.create!(product_category: ar, title: 'Caixas de passagem e painéis a prova de explosão', 
-                code: 'CCEx',
-                description: 'PROTEÇÃO: Ex d \nZONAS: 1 e 2\nGRUPO: IIB\nCLASSE DE TEMPERATURA: T6 ou T5\nEPL: Gb\nGRAU DE PROTEÇÃO: IP66',
-                slug: 'caixas-de-passagem-e-paineis-a-prova-de-explosao',
-                keywords: '',
-                showcase: true, exhibition_order: 1, showcase_exhibition_order: 1)
+p1 = Product.create!(product_category: ar, title: 'Caixas de passagem e painéis a prova de explosão', 
+                     code: 'CCEx',
+                     description: 'PROTEÇÃO: Ex d \nZONAS: 1 e 2\nGRUPO: IIB\nCLASSE DE TEMPERATURA: T6 ou T5\nEPL: Gb\nGRAU DE PROTEÇÃO: IP66',
+                     slug: 'caixas-de-passagem-e-paineis-a-prova-de-explosao',
+                     keywords: '',
+                     showcase: true, exhibition_order: 1, showcase_exhibition_order: 1)
+p1.images.create!(url: 'http://www.nordserv.com.br/timthumb.php?src=/images/produtos/104.JPG&w=800&zc=100', showcase: true)
 
