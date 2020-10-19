@@ -189,6 +189,7 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.7.1)
     rexml (3.2.4)
+    rspec-json_expectations (2.2.0)
     rspec-nc (0.0.3)
       terminal-notifier (~> 1.4.2)
     rubocop (0.90.0)
@@ -249,6 +250,7 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.2)
   rspec-core!
   rspec-expectations!
+  rspec-json_expectations
   rspec-mocks!
   rspec-nc
   rspec-rails!
