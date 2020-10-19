@@ -6,6 +6,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Product.destroy_all
 ProductCategory.destroy_all
 ar = ProductCategory.create!(description: 'Áreas classificadas', slug: 'areas-classificadas', exhibition_order: 1)
 ProductCategory.create!(description: 'Acionamentos e bujões', product_category: ar, slug: 'acionamentos', exhibition_order: 1)
@@ -22,8 +23,16 @@ ProductCategory.create!(description: 'Cavalotes', product_category: lt, slug: 'c
 ProductCategory.create!(description: 'Chapas de extensão', product_category: lt, slug: 'chapas-de-extensao', exhibition_order: 4)
 ProductCategory.create!(description: 'Conchas', product_category: lt, slug: 'conchas', exhibition_order: 5)
 
-
 rd = ProductCategory.create!(description: 'Rede de distribuição', slug: 'rede-de-distribuicao', exhibition_order: 1)
 ProductCategory.create!(description: 'Anel de amarração', product_category: rd, slug: 'anel-de-amarracao', exhibition_order: 1)
 ProductCategory.create!(description: 'Armações', product_category: rd, slug: 'armacoes', exhibition_order: 2)
 ProductCategory.create!(description: 'Braço anti-balanço', product_category: rd, slug: 'braco-anti-balanco', exhibition_order: 3)
+
+p1 = Product.create!(product_category: ar, title: 'Caixas de passagem e painéis a prova de explosão', 
+                     code: 'CCEx',
+                     description: 'PROTEÇÃO: Ex d \nZONAS: 1 e 2\nGRUPO: IIB\nCLASSE DE TEMPERATURA: T6 ou T5\nEPL: Gb\nGRAU DE PROTEÇÃO: IP66',
+                     slug: 'caixas-de-passagem-e-paineis-a-prova-de-explosao',
+                     keywords: '',
+                     showcase: true, exhibition_order: 1, showcase_exhibition_order: 1)
+p1.images.create!(url: 'http://www.nordserv.com.br/timthumb.php?src=/images/produtos/104.JPG&w=800&zc=100', showcase: true)
+
